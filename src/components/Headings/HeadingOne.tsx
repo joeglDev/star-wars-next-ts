@@ -1,6 +1,11 @@
-import styles from './HeadingOne.module.css'
+import styles from './Heading.module.css';
 
-export const HeadingOne = (props: any) => {
+interface HeadingProps {
+  content: Array<string | JSX.Element>
+}
+
+export const HeadingOne = (props: HeadingProps) => {
   const content: (string | JSX.Element)[] = props.content;
+  console.log(props)
   return <h1 className={styles.h1}>{content}</h1>;
 };
